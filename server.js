@@ -5,9 +5,8 @@ import { bugService } from './services/bug.service.js'
 
 
 const app = express()
+app.use(express.static('public'))
 
-app.get('/', (req, res) => res.send('Hello there'))
-app.listen(3030, () => console.log('Server ready at port 3030'))
 
 app.get('/api/bug', (req, res) => {
     bugService.query()
@@ -57,3 +56,8 @@ app.get('/api/bug/:bugId/remove', (req, res) => {
             res.status(500).send('Cannot remove bug')
         })
  })
+
+ const port = 3030
+app.listen(port, () =>
+    loggerService.info(`Server listening on port http://127.0.0.1:${port}/`)
+)
