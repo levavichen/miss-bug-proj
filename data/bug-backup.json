@@ -5,5 +5,33 @@
         "description": "problem when clicking Save",
         "severity": 3,
         "createdAt": 1542107359454
+    },
+    {
+        "_id": "1NF1N1T3",
+        "title": "Infinite Loop Detected",
+        "description": "problem entering a loop",
+        "severity": 4,
+        "createdAt": 9754578906
+    },
+    {
+        "_id": "K3YB0RD",
+        "title": "Keyboard Not Found",
+        "description": "problem with connecting keyboard",
+        "severity": 3,
+        "createdAt": 8765356795467
+    },
+    {
+        "_id": "C0FF33",
+        "title": "404 Coffee Not Found",
+        "description": "problem when trying to connect to Coffee",
+        "severity": 2,
+        "createdAt": 17422698087635
+    },
+    {
+        "_id": "G0053",
+        "title": "Unexpected Response",
+        "description": "some other problem",
+        "severity": 1,
+        "createdAt": 987654356789097
     }
 ]

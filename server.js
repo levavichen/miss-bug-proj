@@ -6,6 +6,8 @@ import { bugService } from './services/bug.service.js'
 
 const app = express()
 app.use(express.static('public'))
+app.use(cookieParser())
+
 
 
 app.get('/api/bug', (req, res) => {
@@ -39,6 +41,18 @@ app.get('/api/bug/save', (req, res) => {
 
 app.get('/api/bug/:bugId', (req, res) => { 
     const { bugId } = req.params
+    let visitedBugs = req.cookies.visitedBugs || []
+
+    if (!visitedBugs.includes(bugId)) visitedBugs.push(bugId)
+
+    if(visitedBugs.length>3){
+        return res.status(401).send('Wait for a bit')
+    }
+
+    res.cookie('visitedBugs', visitedBugs, { maxAge: 7 * 1000 })
+    console.log('visitedBugs', visitedBugs)
+
+
     bugService.getById(bugId)
         .then(bug => res.send(bug))
         .catch(err => {
