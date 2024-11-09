@@ -11,8 +11,17 @@ export const bugService = {
 }
 
 
-function query() {
-    return Promise.resolve(bugs)
+function query(filterBy) {
+    var filteredBugs = bugs
+
+    if (filterBy.txt) {
+        const regExp = new RegExp(filterBy.txt, 'i')
+        filteredBugs = bugs.filter(bug => regExp.test(bug.title))
+    }
+    if (filterBy.minSeverity) {
+        filteredBugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
+    }
+    return Promise.resolve(filteredBugs)
 }
 
 function getById(bugId) {
@@ -32,9 +41,31 @@ function save(bugToSave) {
 
     if (bugToSave._id) {
         const bugIdx = bugs.findIndex(bug => bug._id === bugToSave._id)
-        bugs[bugIdx] = bugToSave
+        bugToSave = {
+            _id: bugToSave._id,
+            title: bugToSave.title,
+            description: bugToSave.description,
+            severity: bugToSave.severity,
+            updatedAt: Date.now(),
+        }
+
+        bugs[bugIdx].title = bugToSave.title
+        bugs[bugIdx].description = bugToSave.description
+        bugs[bugIdx].severity = bugToSave.severity
+        bugs[bugIdx].updatedAt = bugToSave.updatedAt
+
+
     } else {
-        bugToSave._id = utilService.makeId()
+        bugToSave = {
+            _id: utilService.makeId(),
+            title: bugToSave.title,
+            description: bugToSave.description || '',
+            severity: bugToSave.severity,
+            labels: [],
+            createdAt: Date.now(),
+            updatedAt: Date.now(),
+        }
+        
         bugs.unshift(bugToSave)
     }
 
