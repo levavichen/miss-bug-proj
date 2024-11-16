@@ -1,5 +1,3 @@
-
-
 export function BugPreview({bug}) {
 
     return <article>

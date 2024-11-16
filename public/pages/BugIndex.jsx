@@ -24,6 +24,7 @@ export function BugIndex() {
     }
 
     function onRemoveBug(bugId) {
+        console.log(bugId)
         bugService
             .remove(bugId)
             .then(() => {
@@ -81,6 +82,10 @@ export function BugIndex() {
         setFilterBy(prevFilter => ({ ...prevFilter, ...filterBy }))
     }
 
+    function onChangePageIdx(diff) {
+        setFilterBy(prevFilter => ({ ...prevFilter, pageIdx: prevFilter.pageIdx + diff }))
+    }
+
     return (
         <main>
             <section className='info-actions'>
@@ -91,6 +96,9 @@ export function BugIndex() {
             </section>
             <main>
                 <BugFilter filterBy={filterBy} onSetFilter={onSetFilter} />
+                <button onClick={() => { onChangePageIdx(1) }}>+</button>
+                {filterBy.pageIdx + 1 || ''}
+                <button onClick={() => { onChangePageIdx(-1) }} disabled={filterBy.pageIdx === 0}>-</button>
                 <BugList bugs={bugs} onRemoveBug={onRemoveBug} />
             </main>
         </main>

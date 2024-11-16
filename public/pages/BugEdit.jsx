@@ -19,22 +19,17 @@ export function BugEdit() {
     }, [])
 
     function loadBug() {
-        bugService.get(bugId)
+        bugService.getById(bugId)
             .then(setBugToEdit)
             .catch(err => console.log('err:', err))
     }
 
     function onSaveBug(ev) {
         ev.preventDefault()
+
         bugService.save(bugToEdit)
-            .then(() => {
-                navigate('/bug')
-                showSuccessMsg(`Bug saved successfully!`)
-            })
-            .catch(err => {
-                console.log('err:', err)
-                showErrorMsg('Cannot save bug')
-            })
+            .then(() => navigate('/bug'))
+            .catch(err => showErrorMsg('Cannot save bug'))
     }
 
     function handleChange({ target }) {

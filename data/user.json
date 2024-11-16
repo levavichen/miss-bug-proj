@@ -1,0 +1,43 @@
+[
+  {
+    "_id": "admin",
+    "username": "admin",
+    "fullname": "admin admin",
+    "password": "admin",
+    "score": 100,
+    "isAdmin": true
+  },
+  {
+    "_id": "u134",
+    "username": "kobi",
+    "fullname": "kobi lavian",
+    "password": "kobi",
+    "score": 100
+  },
+  {
+    "_id": "u101",
+    "username": "chen",
+    "fullname": "chen levavi",
+    "password": "chen",
+    "score": 100
+  },
+  {
+    "_id": "u102",
+    "username": "shimrit",
+    "fullname": "shimrit levavi",
+    "password": "shimrit",
+    "score": 100
+  },
+  {
+    "username": "shachar",
+    "password": "shachar",
+    "fullname": "shachar levavi",
+    "_id": "6iykr"
+  },
+  {
+    "username": "sefi",
+    "fullname": "sefi levavi",
+    "password": "sefi",
+    "_id": "75dwp"
+  }
+]

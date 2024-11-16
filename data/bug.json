@@ -1,80 +1,71 @@
 [
     {
-        "_id": "Izpj0",
-        "title": "now work",
-        "description": "23142",
-        "severity": 3,
+        "_id": "rmK0E",
+        "title": "buglife",
+        "description": "life is bug",
+        "severity": 5,
         "labels": [],
-        "createdAt": 1731172876034,
-        "updatedAt": 1731172876034
+        "createdAt": 1731767766861,
+        "updatedAt": 1731767766861,
+        "owner": {
+            "_id": "admin",
+            "fullname": "admin admin",
+            "isAdmin": true
+        }
     },
     {
-        "_id": "7dEH4",
-        "title": "tHIS IS A NEW TEST",
-        "description": "will noe",
+        "_id": "WTc3J",
+        "title": "testin",
+        "description": "",
         "severity": 1,
         "labels": [],
-        "createdAt": 1731172716392,
-        "updatedAt": 1731172716392
+        "createdAt": 1731759254789,
+        "updatedAt": 1731759254789,
+        "owner": {
+            "_id": "PXMNu",
+            "fullname": "israel levavi",
+            "isAdmin": true
+        }
     },
     {
-        "_id": "b2dR3",
-        "title": "noe?",
-        "description": "donw kn",
-        "severity": 2,
-        "createdAt": 1731171469366,
-        "updatedAt": 1731171469366
+        "_id": "WmjZv",
+        "title": "new new",
+        "description": "",
+        "severity": 4,
+        "labels": [],
+        "createdAt": 1731759247846,
+        "updatedAt": 1731759247846,
+        "owner": {
+            "_id": "PXMNu",
+            "fullname": "israel levavi",
+            "isAdmin": true
+        }
     },
     {
-        "_id": "LQSJj",
-        "title": "will it work now?",
-        "description": "maybe",
+        "_id": "6Rmvx",
+        "title": "new new",
+        "description": "new new new",
+        "severity": 1,
+        "labels": [],
+        "createdAt": 1731758839292,
+        "updatedAt": 1731758839292,
+        "owner": {
+            "_id": "PXMNu",
+            "fullname": "israel levavi",
+            "isAdmin": true
+        }
+    },
+    {
+        "_id": "ZnRPi",
+        "title": "testin",
+        "description": "tesing",
         "severity": 3,
-        "createdAt": 1731171434818,
-        "updatedAt": 1731171434818
-    },
-    {
-        "_id": "N030d",
-        "title": "this is a test",
-        "description": "working?",
-        "severity": 3,
-        "createdAt": 1731171339450,
-        "updatedAt": 1731172663949
-    },
-    {
-        "_id": "LXsLC",
-        "createdAt": 1731171233863,
-        "updatedAt": 1731171233863
-    },
-    {
-        "_id": "LCTSF",
-        "title": "testing",
-        "description": "is it true",
-        "severity": 3,
-        "createdAt": 1731171156881,
-        "updatedAt": 1731172867933
-    },
-    {
-        "_id": "HCAdM",
-        "createdAt": 1731170051978,
-        "updatedAt": 1731170051978
-    },
-    {
-        "_id": "KFlr8",
-        "createdAt": 1731169735392,
-        "updatedAt": 1731169735392
-    },
-    {
-        "_id": "K3YB0RD",
-        "title": "Keyboard Not Found",
-        "description": "hihihi",
-        "severity": 5,
-        "createdAt": null
-    },
-    {
-        "_id": "C0FF33",
-        "title": "404 Coffee Not Found",
-        "severity": 8,
-        "createdAt": null
+        "labels": [],
+        "createdAt": 1731755057557,
+        "updatedAt": 1731758604645,
+        "owner": {
+            "_id": "PXMNu",
+            "fullname": "israel levavi"
+        }
     }
 ]
